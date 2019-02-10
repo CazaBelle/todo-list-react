@@ -1,4 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Todo List
+A single page app made with react that allows you to keep a strict log of your many todos. 
+
+
+
+#Installation 
+
+#Built with
+
+#Modelling
+A container does data fetching and then renders its corresponding subcomponent 
+
+TodoListContainer => TodoList
+TodoContainer => Todo 
+
+
+#Testing 
+* [Kent C. Dodds - React Testing Library](https://github.com/kentcdodds/react-testing-library#faq)
+* lightweight test utility allows feature testing => exports a render function
+=> exports helper methods allowing you to locate elements by label or text or even test IDs
+
+* `npm test --watch` #then a 
+
+## Hierarchy of queries as reccomended by docs
+* getByLabelText (form inputs)
+* getByPlaceholderText (only if your input doesn’t have a label — less accessible!)
+* getByText (buttons and headers)
+* getByAltText (images)
+* getByTestId (use this for things like dynamic text or otherwise odd elements you want to test)
+* each of these have a queryByFoo to test existence
+* render => will return the DOM element mapped to the container
+
+
 
 ## Available Scripts
 
