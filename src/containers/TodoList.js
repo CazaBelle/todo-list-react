@@ -2,11 +2,20 @@ import React, { Component } from 'react';
 import Todo from '../components/Todo'
 
 export default class TodoList extends Component {
-  render(){
+  renderTodos(){
+    return this.props.todos.map((todo, i) => (
+      <Todo key={i} {...todo}/>
+    ))
+  }
+
+  render() {
     const { header } = this.props
     return (
-    <div>
+    <div className="TodoList">
       <h1>{ header }</h1>
+      <div className="todo-list">
+        {this.renderTodos()}
+      </div>
     </div>
     )
   }
